@@ -45,7 +45,6 @@ These files have been tested and used to generate a live ELK deployment on Azure
         state: present
         reload: yes
         
-```
       # Use docker_container module
     - name: download and launch a docker elk container
       docker_container:
@@ -57,7 +56,8 @@ These files have been tested and used to generate a live ELK deployment on Azure
           - 5601:5601
           - 9200:9200
           - 5044:5044
-
+          
+```
 This document contains the following details:
 - Description of the Topologu
 - Access Policies
