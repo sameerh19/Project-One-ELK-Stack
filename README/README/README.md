@@ -45,6 +45,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
         state: present
         reload: yes
 ```
+
       # Use docker_container module
     - name: download and launch a docker elk container
       docker_container:
