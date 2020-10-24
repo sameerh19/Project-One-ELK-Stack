@@ -95,11 +95,11 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the **jumpbox** machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-**- _TODO: Add whitelisted IP addresses_: 216.188.246.50**
+- _TODO: Add whitelisted IP addresses_: **216.188.246.50**
 
 Machines within the network can only be accessed by **each other**.
-**- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
-The machine that was allowed acces to the ELK VM was the Jumpbox Provisioner. Its IP address is 10.0.0.4** 
+- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+**The machine that was allowed acces to the ELK VM was the Jumpbox Provisioner. Its IP address is 10.0.0.4** 
 
 A summary of the access policies in place can be found in the table below.
 
@@ -133,8 +133,11 @@ We have installed the following Beats on these machines:
 
 These Beats allow us to collect the following information from each machine:
 - _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+
 **File Beat:** Detects changes to the file system, specifically to collect Apache logs.
+
 **Metric Beat:** Detects changes in system metrics, such as CPU usage. We use it to detect SSH login attemps, failed sudo escalations, and CPU/RAM statistics. 
+
 **Packet Beat:** Packetbeat collects packets that pass through the NIC, similar to wireshark. We use it to generate a trace of all activity that takes place on the network, in case later forensic analysis should be warranted. 
 
 
