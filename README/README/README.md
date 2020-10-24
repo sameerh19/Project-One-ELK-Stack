@@ -75,29 +75,31 @@ Load balancing ensures that the application will be highly available, in additio
 **LOAD BALANCING: This allows for high availability. Ensures that work to process incoming traffic is properly distributed between both load balancers.**
 **JUMPBOX: Allows for security to be managed outsude of managed devices, allowing to harden the system
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+**Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the file systems of the VM's on the network and system metrics. These metrics include CPU usage, attempted SSH logins, sudo escalation failures; etc.**
+
+**- _TODO: What does Filebeat watch for?_ Collects data abou the file system. 
+- _TODO: What does Metricbeat record?_ Collects machine metrics such as uptime.** 
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
-| Name     | Function | IP Address | Operating System |
-|----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
+| Name                 | Function   | IP Address | Operating System |
+| ---------------------|------------|------------|------------------|
+| Jump Box Provisioner | Gateway    | 10.0.0.4   | Linux            |
+| Web-1                | Web Server | 10.0.0.6   | Linux            |
+| Web-2                | Web Server | 10.0.0.5   | Linux            |
+| ELK                  | Monitoring | 10.1.0.4   | Linux            |
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the **jumpbox** machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+**- _TODO: Add whitelisted IP addresses_: 216.188.246.50**
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by **each other**.
+**- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+The machine that was allowed acces to the ELK VM was the Jumpbox Provisioner. Its IP address is 10.0.0.4** 
 
 A summary of the access policies in place can be found in the table below.
 
