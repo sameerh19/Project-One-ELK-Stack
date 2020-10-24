@@ -73,7 +73,7 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly available, in addition to restricting inbound access to the network.
 **LOAD BALANCING: This allows for high availability. Ensures that work to process incoming traffic is properly distributed between both load balancers.**
-**JUMPBOX: Allows for security to be managed outsude of managed devices, allowing to harden the system
+**JUMPBOX: Allows for security to be managed outsude of managed devices, allowing to harden the system**
 
 **Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the file systems of the VM's on the network and system metrics. These metrics include CPU usage, attempted SSH logins, sudo escalation failures; etc.**
 
@@ -105,9 +105,10 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Jump Box | Yes                 | 216.188.246.50       |
+| Web1     | No                  | 10.0.0.1/254         |
+| Web2     | No                  | 10.0.0.1/254         |
+| ELK      | No                  | 10.0.0.1/254         |
 
 ### Elk Configuration
 
