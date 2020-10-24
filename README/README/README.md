@@ -72,7 +72,9 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available, in addition to restricting inbound access to the network.
+
 **LOAD BALANCING:** This allows for high availability. Ensures that work to process incoming traffic is properly distributed between both load balancers.
+
 **JUMPBOX:** Allows for security to be managed outsude of managed devices, allowing to harden the system.
 
 **Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the file systems of the VM's on the network and system metrics. These metrics include CPU usage, attempted SSH logins, sudo escalation failures; etc.**
@@ -145,9 +147,9 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Copy the **playbook** file to **ansible control node.**
+- Update the **host** file to include...**webserbver and elk selver**
+- Run the playbook, and navigate to **kibana (http://[hostip]/app/kibana#)** ** to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
