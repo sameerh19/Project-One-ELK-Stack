@@ -73,13 +73,13 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly available, in addition to restricting inbound access to the network.
 
-**LOAD BALANCING:** This allows for high availability. Ensures that work to process incoming traffic is properly distributed between both load balancers.
+- **LOAD BALANCING:** This allows for high availability. Ensures that work to process incoming traffic is properly distributed between both load balancers.
 
-**JUMPBOX:** Allows for security to be managed outsude of managed devices, allowing to harden the system.
+- **JUMPBOX:** Allows for security to be managed outsude of managed devices, allowing to harden the system.
 
 **Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the file systems of the VM's on the network and system metrics. These metrics include CPU usage, attempted SSH logins, sudo escalation failures; etc.**
 
-- _TODO: What does Filebeat watch for?_ **Collects data abou the file system.**
+- **Filebeat:** Collects data abou the file system.
 - _TODO: What does Metricbeat record?_ **Collects machine metrics such as uptime.** 
 
 The configuration details of each machine may be found below.
