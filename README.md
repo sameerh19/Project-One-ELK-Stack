@@ -97,10 +97,10 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the **jumpbox** machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_: **216.188.246.50**
+- **216.188.246.50**
 
 Machines within the network can only be accessed by **each other**.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+- Which machine did you allow to access your ELK VM? What was its IP address?_
 **The machine that was allowed acces to the ELK VM was the Jumpbox Provisioner. Its IP address is 10.0.0.4** 
 
 A summary of the access policies in place can be found in the table below.
@@ -114,24 +114,27 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because **it allows for accelerated and effecient automation.**
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+- Install Docker.io
+- Install pip3.
+- Install Docker python module.
+- Increase virtual memory.
+- Downloand and launch docker. 
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
 **![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)**
 
 ### Target Machines & Beats
-This ELK server is configured to monitor the following machines: **Web-1 & Web-2**
-- _TODO: List the IP addresses of the machines you are monitoring: **10.0.0.6 & 10.0.0.5**
+This ELK server is configured to monitor the following machines: 
+- Web-1: 10.0.0.6
+- Web-2: 10.0.0.5
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_ **Filebeat and Metricbeat.**
+- Filebeat
+- Metricbeat
 
 These Beats allow us to collect the following information from each machine:
 
@@ -139,7 +142,7 @@ These Beats allow us to collect the following information from each machine:
 
 **Metric Beat:** Detects changes in system metrics, such as CPU usage. We use it to detect SSH login attemps, failed sudo escalations, and CPU/RAM statistics. 
 
-**Packet Beat:** Packetbeat collects packets that pass through the NIC, similar to wireshark. We use it to generate a trace of all activity that takes place on the network, in case later forensic analysis should be warranted. 
+**Packet Beat:** Packetbeat collects packets that pass through the NIC, similar to wireshark. We use it to generate a trace of all activity that takes place on the network, in case later forensic analysis should be warranted. (Was not installed on the machines)
 
 
 ### Using the Playbook
