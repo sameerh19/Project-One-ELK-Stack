@@ -100,11 +100,23 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 - Copy the **playbook** file to **ansible control node.**
 - Update the **host** file to include...**webserbver and elk selver**
+- ```
+$ cd /etc/ansible
+$ cat > hosts <<EOF
+[webservers]
+10.0.0.7
+10.0.0.8
+
+[elk]
+10.1.0.4
+EOF
+```
 - Run the playbook, and navigate to **kibana (http://[hostip]/app/kibana#/home)** ** to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running? **kibana (http://[hostip]/app/kibana#/home)** 
-
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+```
+ $ cd /etc/ansible
+ $ ansible-playbook install_elk.yml elk
+ $ ansible-playbook install_filebeat.yml webservers
+ $ ansible-playbook install_metricbeat.yml webservers
+ ```
+ - Check that the ELK server is running: **http://[Host IP]/app/kibana#/home**
