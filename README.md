@@ -98,9 +98,20 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the **playbook** file to **ansible control node.**
-- Update the **host** file to include...**webserbver and elk selver**
-- ```
+- Copy the **playbook** file to **Ansible Control Node**.
+-  Playbooks for Filebeat and Mtricbeat are also here: [filebeat-playbook.yml](Playbooks/filebeat-playbook.yml) & [metricbeat-playbook.yml](Playbooks/metricbeat-playbook.yml)
+```
+$ cd /etc/ansible
+$ mkdir files
+# Clone Repository + IaC Files
+$ git clone https://github.com/TenkiYamada/Project-1-ELK-Stack-Project.git
+# Move Playbooks and hosts file Into `/etc/ansible`
+$ cp /Project-1-ELK-Stack-Project/ReadMe/Playbooks/*
+```
+- Update the **hosts** file to include **webserver** and **elk**
+- Edit **hosts** file to update and to make Ansible run the playbook on a specific machine, and specify which machine to install the ELK server on versus which to install Filebeat.
+- Copy of the hosts file is also here: [hosts](Files/hosts)
+```
 $ cd /etc/ansible
 $ cat > hosts <<EOF
 [webservers]
@@ -111,8 +122,7 @@ $ cat > hosts <<EOF
 10.1.0.4
 EOF
 ```
-- Run the playbook, and navigate to **kibana (http://[hostip]/app/kibana#/home)** ** to check that the installation worked as expected.
-
+- Run the playbook, and navigate to **Kibana (http://[Host IP]/app/kibana#/home)** to check that the installation worked as expected.
 ```
  $ cd /etc/ansible
  $ ansible-playbook install_elk.yml elk
